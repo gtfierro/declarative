@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="static/css/site.css" />
+  	<title>Title</title>
+  </head>
+  <body>
+    <div class="container white">
+        <div class="row">
+            <!-- section header -->
+            <h3 class="center-align">Section 1</h3>
+
+            <!-- how to do a paragraph of text -->
+            <div class="s12">
+                <p>
+                oh look a paragraph wit hsome instructions in it blah blah
+                oh look a paragraph wit hsome instructions in it blah blah
+                oh look a paragraph wit hsome instructions in it blah blah
+                oh look a paragraph wit hsome instructions in it blah blah
+                </p>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Target Host</h5>
+
+            <form id="installform" form="installform"></form>
+
+            <!-- an example textfield-->
+            <div class="row">
+              <label for="installaddr">Target Installation Host</label>
+              <input form="installform" placeholder="127.0.0.1" id="installaddr" type="text" />
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Contact Configure</h5>
+
+            <!-- an alternative textfield-->
+            <div class="row">
+              <div class="col s6 valign-wrapper">
+                <p class="valign">Admin Email Address</p>
+              </div>
+              <div class="col s6">
+                <input form="installform" placeholder="" id="adminemail" type="text" />
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="row center-align">Select</h5>
+
+            <!-- dropdown -->
+            <div class="row">
+              <div class="input-field col s12">
+                <select form="installform" id="dropdownselect">
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label class="active">Materialize Select</label>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Install Software</h5>
+
+            <!-- dropdown -->
+            <div class="row">
+              <div class="col s12">
+                <p>Hey look here are some instructions for the form</p>
+              </div>
+              <div class="input-field col s12">
+                <select multiple form="installform" id="softwareinstall">
+                  <option value="" disabled>Choose Software to install</option>
+                  <option selected value="1">Archiver</option>
+                  <option selected value="2">Spawnpoint</option>
+                  <option value="3">HodDB</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Radio Test</h5>
+
+            <div class="row">
+                <div class="col s12">
+                  <input name="radio1" type="radio" id="LocalInstall" form="installform" />
+                  <label for="LocalInstall">Local Install</label>
+                </div>
+                <div class="col s12">
+                  <input name="radio1" type="radio" id="RemoteInstall" form="installform" />
+                  <label for="RemoteInstall">Remote Install</label>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Software Install</h5>
+
+            <div class="row">
+              <div class="col s12">
+                <input form="installform" class="filled-in" type="checkbox" id="installarchiver" />
+                <label for="installarchiver">Archiver</label>
+              </div>
+              <div class="col s12">
+                <input form="installform" class="filled-in" type="checkbox" id="installspawnpoint" />
+                <label for="installspawnpoint">Spawnpoint</label>
+              </div>
+              <div class="col s12">
+                <input form="installform" class="filled-in" type="checkbox" id="installhod" />
+                <label for="installhod">HodDB</label>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">SSH Key</h5>
+
+            <div class="row">
+              <div class="col s12">
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>SSH Key</span>
+                    <input form="installform" type="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input form="installform" class="file-path validate" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <h5 class="center-align">Configure Expiry</h5>
+
+            <div class="row">
+              <div class="col s12">
+                <label for="expirydate">Expiry</label>
+                <input id="expirydate" form="installform" type="date" class="datepicker">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="right-align">
+                  <button class="btn waves-effect waves-light right-align" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="static/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('select').material_select();
+        });
+    </script>
+  </body>
+</html>
+
